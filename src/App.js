@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Greeting from './components/Greeting'
+import Nav from './components/Nav'
+import Post from './components/Post'
+
+const posts = [
+  {
+    id: 1,
+    title: "Let's learn React!",
+  },
+  {
+    id: 2,
+    title: 'How to install Node.js',
+  },
+  {
+    id: 3,
+    title: 'Basic HTML',
+  },
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Greeting name="TaiChi " surname=" Meme" />
+      <div className="feed-container">
+        {posts.map((post) => {
+          return <Post key={post.id} post={post} />
+        })}
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

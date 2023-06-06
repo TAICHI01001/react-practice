@@ -1,0 +1,19 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+}
+h1 {
+  padding: 15px;
+}
+button {
+  border-radius: 5px;
+  background: #fff;
+  margin: 15px;
+  border: none;
+  padding: 10px;
+}
+button:hover {
+  box-shadow: 0 0 10px 10px rgba(124, 123, 123, 0.2);
+}
